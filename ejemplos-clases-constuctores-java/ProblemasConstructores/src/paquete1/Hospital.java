@@ -10,11 +10,12 @@ package paquete1;
  * @author reroes
  */
 public class Hospital {
+
     private String nombre;
     private String ciudad;
     private int numeroDoctores;
     private int numeroEnfermeros;
-    
+
     /*
         Crear un constructor que no tenga parámetros
         y que asigne valores ya establecidos a todos 
@@ -24,38 +25,38 @@ public class Hospital {
     numeroDoctores: 100
     numeroEnfermeros: 200
     
-    */
-    
-    public void establecerNombre(String n){
-        nombre = n;
+     */
+    public Hospital() {
+        nombre = "Isidro Ayora";
+        ciudad = "Loja";
+        numeroDoctores = 100;
+        numeroEnfermeros = 200;
     }
-    
-    public void establecerCiudad(String n){
-        ciudad = n;
-    }
-    
-    public void establecerNumeroDoctores(int n){
-        numeroDoctores = n;
-    }
-    
-    public void establecerNumeroEnfermeros(int n){
-        numeroEnfermeros = n;
-    }
-    
-    public String obtenerNombre(){
+
+    public String obtenerNombre() {
         return nombre;
     }
-    
-    public String obtenerCiudad(){
+
+    public String obtenerCiudad() {
         return ciudad;
     }
-    
-    public int obtenerNumeroDoctores(){
+
+    public int obtenerNumeroDoctores() {
         return numeroDoctores;
     }
-    
-    public int obtenerNumeroEnfermeros(){
+
+    public int obtenerNumeroEnfermeros() {
         return numeroEnfermeros;
     }
-    
+
+    @Override
+    public String toString() {
+        String cadenaFinal = String.format("Nombre: %s\n"
+                + "Ciudad: %s\n"
+                + "Numero De Doctores: %d"
+                + "\nNumero De Enfermeros:%d\n",
+                obtenerNombre(), obtenerCiudad(), obtenerNumeroDoctores(),
+                obtenerNumeroEnfermeros());
+        return cadenaFinal;
+    }
 }
